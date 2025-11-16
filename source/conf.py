@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'DenoiseST'
+project = 'scSTADE'
 copyright = '2024, Cui Yaxuan'
 author = 'Cui Yaxuan'
 release = '1'
