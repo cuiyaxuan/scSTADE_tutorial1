@@ -3,19 +3,19 @@ Tutorial 4: VisiumHD dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">In this tutorial, we show how to apply DenoiseST to identify spatial domains on VisiumHD dataset. As a example, we analyse the VisiumHD dataset.</div>
+    <div style="font-size: 15px;">In this tutorial, we show how to apply scSTADE to identify spatial domains on VisiumHD dataset. As a example, we analyse the VisiumHD dataset.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/DenoiseST/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
+    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/scSTADE/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: ipython3
 
-    from DenoiseST_HD import DenoiseST
+    from scSTADE_HD import scSTADE
     import os
     import torch
     import pandas as pd
@@ -49,7 +49,7 @@ Tutorial 4: VisiumHD dataset
     file_fold = '/home/cuiyaxuan/spatialLIBD/square_016um/' #### to your path
     adata = sc.read_visium(file_fold, count_file='filtered_feature_bc_matrix.h5', load_images=True) #### project name
     adata.var_names_make_unique()
-    model = DenoiseST(adata,device=device,n_top_genes=5000)
+    model = scSTADE(adata,device=device,n_top_genes=5000)
     adata = model.train()
     radius = 50
     tool = 'mclust' # mclust, leiden, and louvain
