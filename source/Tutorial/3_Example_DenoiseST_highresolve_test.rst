@@ -3,19 +3,19 @@ Tutorial 3: Slide-seq or Stereo-seq dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">In this tutorial, we show how to apply DenoiseST to identify spatial domains on Slide-seq or Stereo-seq. As a example, we analyse the Stereo dataset.</div>
+    <div style="font-size: 15px;">In this tutorial, we show how to apply scSTADE to identify spatial domains on Slide-seq or Stereo-seq. As a example, we analyse the Stereo dataset.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/DenoiseST/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
+    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/scSTADE/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: ipython3
 
-    from DenoiseST import DenoiseST
+    from scSTADE import scSTADE
     import os
     import torch
     import pandas as pd
@@ -47,7 +47,7 @@ Tutorial 3: Slide-seq or Stereo-seq dataset
     file_path = '/home/cuiyaxuan/spatialLIBD/5.Mouse_Olfactory/' #please replace 'file_path' with the download path
     adata = sc.read_h5ad(file_path + 'filtered_feature_bc_matrix.h5ad') #### project name
     adata.var_names_make_unique()
-    model = DenoiseST(adata,datatype='Slide',device=device,n_top_genes=4000)
+    model = scSTADE(adata,datatype='Slide',device=device,n_top_genes=4000)
     adata = model.train()
     radius = 50
     tool = 'mclust' # mclust, leiden, and louvain
@@ -171,7 +171,7 @@ Tutorial 3: Slide-seq or Stereo-seq dataset
 
 
 
-.. image:: 3_Example_DenoiseST_highresolve_test_files/3_Example_DenoiseST_highresolve_test_4_1.png
+.. image:: 3_Example_scSTADE_highresolve_test_files/3_Example_scSTADE_highresolve_test_4_1.png
    :width: 315px
    :height: 277px
 
