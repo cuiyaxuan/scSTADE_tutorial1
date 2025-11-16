@@ -3,19 +3,19 @@ Tutorial 1: 10X Visium DLPFC dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">In this tutorial, we show how to apply DenoiseST to identify spatial domains on 10X Visium data. As a example, we analyse the 151672 sample of the dorsolateral prefrontal cortex (DLPFC) dataset.</div>
+    <div style="font-size: 15px;">In this tutorial, we show how to apply scSTADE to identify spatial domains on 10X Visium data. As a example, we analyse the 151672 sample of the dorsolateral prefrontal cortex (DLPFC) dataset.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/DenoiseST/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
+    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/scSTADE/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <div style="font-size: 15px;"> First, cd /home/.../DenoiseST-main/Full </div>
+    <div style="font-size: 15px;"> First, cd /home/.../scSTADE-main/Full </div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -68,7 +68,7 @@ Tutorial 1: 10X Visium DLPFC dataset
 
 .. code:: ipython3
 
-    from DenoiseST import DenoiseST
+    from scSTADE import scSTADE
     import os
     import torch
     import pandas as pd
@@ -108,7 +108,7 @@ Tutorial 1: 10X Visium DLPFC dataset
           file_fold = file
           adata = sc.read_visium(file_fold, count_file = count, load_images=True)
           adata.var_names_make_unique()
-          model = DenoiseST(adata,device=device,n_top_genes=i)
+          model = scSTADE(adata,device=device,n_top_genes=i)
           adata = model.train()
           radius = 50
           tool = 'mclust' # mclust, leiden, and louvain
@@ -168,7 +168,7 @@ Tutorial 1: 10X Visium DLPFC dataset
        file_fold = file
        adata = sc.read_visium(file_fold, count_file= count, load_images=True)
        adata.var_names_make_unique()
-       model = DenoiseST(adata,device=device,n_top_genes=5000)
+       model = scSTADE(adata,device=device,n_top_genes=5000)
        adata = model.train()
        radius = 50
        tool = 'mclust' # mclust, leiden, and louvain
