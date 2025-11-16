@@ -3,20 +3,20 @@ Tutorial 2: 10X Visium Breast dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">In this tutorial, we show how to apply DenoiseST to identify spatial domains on 10X Visium data. As a example, we analyse the Breast dataset.</div>
+    <div style="font-size: 15px;">In this tutorial, we show how to apply scSTADE to identify spatial domains on 10X Visium data. As a example, we analyse the Breast dataset.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/DenoiseST/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
+    <div style="font-size: 15px;">The source code package is freely available at https://github.com/cuiyaxuan/scSTADE/tree/master. The datasets used in this study can be found at https://drive.google.com/drive/folders/1H-ymfCqlDR1wpMRX-bCewAjG5nOrIF51?usp=sharing.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: ipython3
 
     #Low-resolution spatial transcriptomics data simplified version.
-    from DenoiseST import DenoiseST
+    from scSTADE import scSTADE
     import os
     import torch
     import pandas as pd
@@ -48,7 +48,7 @@ Tutorial 2: 10X Visium Breast dataset
     file_fold = '/home/cuiyaxuan/spatialLIBD/3.Human_Breast_Cancer' #### to your path
     adata = sc.read_visium(file_fold, count_file='filtered_feature_bc_matrix.h5', load_images=True) #### project name
     adata.var_names_make_unique()
-    model = DenoiseST(adata,device=device,n_top_genes=5000)
+    model = scSTADE(adata,device=device,n_top_genes=5000)
     adata = model.train()
     radius = 50
     tool = 'mclust' # mclust, leiden, and louvain
