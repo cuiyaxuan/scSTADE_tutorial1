@@ -1,4 +1,4 @@
 about
 ========
  ​
-User Manual for DenoiseST Tool
+User Manual for scSTADE Tool
