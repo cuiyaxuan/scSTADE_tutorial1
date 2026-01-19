@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'scSTADE'
-copyright = '2024, Cui Yaxuan'
+copyright = '2025, Cui Yaxuan'
 author = 'Cui Yaxuan'
 release = '1'
 
