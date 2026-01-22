@@ -15,7 +15,7 @@ Tutorial 1: 10X Visium DLPFC dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;"> First, cd /home/.../scSTADE-main/Full </div>
+    <div style="font-size: 15px;"> First, cd /home/.../scSTADE/scSTADE_Cluster_Functions/ </div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
