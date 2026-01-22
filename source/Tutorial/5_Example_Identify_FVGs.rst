@@ -3,7 +3,7 @@ Tutorial 5: Identifying FVGs in 10X Visium DLPFC dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">In this tutorial, we show how to apply DenoiseST to identify FVGs on 10X Visium DLPFC dataset. As a example, we analyse the Visium dataset.</div>
+    <div style="font-size: 15px;">In this tutorial, we show how to apply scSTADE to identify FVGs on 10X Visium DLPFC dataset. As a example, we analyse the Visium dataset.</div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -15,7 +15,7 @@ Tutorial 5: Identifying FVGs in 10X Visium DLPFC dataset
 
 .. raw:: html
 
-    <div style="font-size: 15px;">First, cd /home/.../DenoiseST-main/FVG</div>
+    <div style="font-size: 15px;">First, cd /home/.../scSTADE_FVG_Functions/div>
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
