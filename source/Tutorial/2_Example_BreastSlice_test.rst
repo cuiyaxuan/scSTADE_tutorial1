@@ -16,6 +16,9 @@ Tutorial 2: 10X Visium Breast dataset
 .. code:: ipython3
 
     #Low-resolution spatial transcriptomics data simplified version.
+    import sys
+    sys.path.append("/.../scSTADE-master/scSTADE_Cluster_Functions")
+    # Input the path.
     from scSTADE import scSTADE
     import os
     import torch
