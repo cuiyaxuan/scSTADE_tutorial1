@@ -67,7 +67,9 @@ Tutorial 1: 10X Visium DLPFC dataset
 
 
 .. code:: ipython3
-
+    import sys
+    sys.path.append("/.../scSTADE-master/scSTADE_Cluster_Functions")
+    # Input the path.
     from scSTADE import scSTADE
     import os
     import torch
