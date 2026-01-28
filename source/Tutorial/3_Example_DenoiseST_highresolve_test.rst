@@ -174,7 +174,7 @@ Tutorial 3: Slide-seq or Stereo-seq dataset
 
 
 
-.. image:: 3_Example_scSTADE_highresolve_test_files/3_Example_scSTADE_highresolve_test_4_1.png
+.. image:: 3_Example_DenoiseST_highresolve_test_files/3_Example_scSTADE_highresolve_test_4_1.png
    :width: 315px
    :height: 277px
 
