@@ -23,7 +23,6 @@ Tutorial 5: Identifying FVGs in 10X Visium DLPFC dataset
 .. code:: ipython3
 
     # we execute the FVG model in the R environment.
-    
     conda create -n r4
     source activate r4
     
@@ -42,6 +41,7 @@ Tutorial 5: Identifying FVGs in 10X Visium DLPFC dataset
 
 .. code:: ipython3
     
+    
     library("devtools")
     devtools::install_github("shaoqiangzhang/DEGman")
     
@@ -51,7 +51,8 @@ Tutorial 5: Identifying FVGs in 10X Visium DLPFC dataset
     install.packages('foreach')
     install.packages('parallel')
     install.packages('doParallel')
-    install.packages('tidyverse')
+
+
 
 
 
