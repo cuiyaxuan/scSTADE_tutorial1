@@ -15,6 +15,9 @@ Tutorial 4: VisiumHD dataset
 
 .. code:: ipython3
 
+    import sys
+    sys.path.append("/.../scSTADE-master/scSTADE_Cluster_Functions")
+    # Input the path.
     from scSTADE_HD import scSTADE
     import os
     import torch
